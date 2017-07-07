@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
  *
  * @wordpress-plugin
  * Plugin Name:       Lipa na Mpesa
- * Plugin URI:        https://github.com/Collinslenjo/kopokopo
+ * Plugin URI:        https://github.com/Collinslenjo/LipaNaMpesa
  * Description:       This is WooCommerce payment gateway enabling payments of the Mpesa buy goods via the Kopokopo api.
  * Version:           1.0.0
  * Author:            Collins Lenjo
