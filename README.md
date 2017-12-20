@@ -16,4 +16,3 @@ To set up instant payment notifications, do the following:
 
 * Replace *```yourwebsite.com```* with your own domain name.
 * With the above done, orders paid for via Lipa na MPESA will automatically be marked as paid.
-> ##### credits to [Kelvin Jayanoris](https://github.com/moshthepitt)
