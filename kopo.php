@@ -155,6 +155,9 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 		class WC_LipaNaMPESA_Gateway extends WC_Payment_Gateway
 		{
 
+			/**
+			 * The mpesa till number receiving payment
+			 */
 			private $till_number;
 
 			function __construct()
@@ -482,6 +485,12 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 						$note = __("PARTLY PAID: Received $ipn_record->currency $ipn_record->amount from $ipn_record->first_name $ipn_record->middle_name $ipn_record->last_name, phone number $ipn_record->sender_phone and MPESA reference $ipn_record->transaction_reference", 'woocommerce');
 						$order->add_order_note($note);
 					}
+				}
+
+				if (empty($ipn_records)) {
+					$error_message = __("Sorry, payment not verified, please enter correct transaction code and phone number used to make payment");
+					wc_add_notice($error_message, 'error');
+					return;
 				}
 
 				// Return thankyou redirect
